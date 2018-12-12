@@ -46,7 +46,7 @@ def _handle_flowstats_received (event):
     dpidToStr(event.connection.dpid), web_bytes1, web_packet1, web_flows1)
 	
   row = [web_packet, web_packet1, web_bytes1]
-  with open('stats_norm.csv', 'a') as csvFile:
+  with open('stats.csv', 'a') as csvFile:
     writer = csv.writer(csvFile)
     writer.writerow(row)
   csvFile.close()
